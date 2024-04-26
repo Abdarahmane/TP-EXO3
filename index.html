@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Commandes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> <!-- Utilisation de "defer" pour s'assurer que le script est exécuté après le chargement du DOM -->
+</head>
+<body>
+    <div class="container"> 
+        <h1>Gestion de Commandes</h1>
+        <hr>
+        <div class="input-section">
+            <form id="formulaire">
+                <label for="product">Produit :</label>
+                <input type="text" id="productname" name="product" placeholder="product" required>
+
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" placeholder="quantity" required>
+
+                <label for="unitprice">Prix unitaire :</label>
+                <input type="number" id="unitprice" name="unitprice" placeholder="unitprice" required>
+                <hr>
+                <input type="submit">
+            </form>
+        </div>
+        <table id="ordertable">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Quantité</th>
+                    <th>Prix Unitaire</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody id="orderbody">
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total :</td>
+                    <td id="totalAmount">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
